@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.KoreaIT.example.JAM.Article;
 
-public class JDBCSelectTEST2 {
+public class JDBCSelectTEST {
 	public static void main(String[] args) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
