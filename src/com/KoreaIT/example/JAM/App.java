@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class App {
 
 	public void run() {
@@ -204,41 +203,7 @@ public class App {
 					System.out.printf("%d  /  %s\n", article.id, article.title);
 				}
 
-			}else if (cmd.startsWith("article delete ")) {
-
-				String[] cmdBits = cmd.split(" ");
-
-				int id = Integer.parseInt(cmdBits[2]);
-
-				int foundIndex = -1;
-
-				for (int i = 0; i < articles.size(); i++) {
-					Article article = articles.get(i);
-
-					if (article.id == id) {
-						foundIndex = i;
-						break;
-					}
-				}
-
-				if (foundIndex == -1) {
-					System.out.printf("%d번 게시물은 없습니다\n", id);
-					continue;
-				}
-
-				articles.remove(foundIndex);
-				System.out.printf("%d번 게시물을 삭제했습니다\n", id);
-
-			} else {
-				System.out.println("존재하지 않는 명령어입니다");
 			}
-		}
-
-		System.out.println("==프로그램 끝==");
-		sc.close();
-	}
-
-
 
 			if (cmd.equals("exit")) {
 				System.out.println("프로그램을 종료합니다");
